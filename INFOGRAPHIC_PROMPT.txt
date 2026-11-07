@@ -1,0 +1,52 @@
+Create a polished portrait LinkedIn educational infographic, 1080 x 1350 pixels, flat crisp graphic design. White canvas, thick blue outer frame, navy ink, blue/green/yellow rounded cards, navy terminal-style code panel. Friendly slightly handwritten headings, very readable clean sans serif body. Generous whitespace. No photographs, no logos, no invented screenshots, no watermarks. A portfolio project study-notes graphic. Use exact text below, keep all text readable and accurately spelled. Do not invent any facts. Avoid Day numbering or a GitHub repository URL because the repo is not published yet.
+
+Top small label: "BOOK TO PYTHON"
+Large title: "Can RLHF pick the better reply?"
+Subtitle: "Human preferences • Small CPU experiment"
+
+Layout 1: two side-by-side cards.
+Blue card title "1. THE DATASET"
+Body "Anthropic HH-RLHF · helpful-base"
+"Real pairs of assistant replies ranked by people."
+"8,000 reward-training pairs"
+"4,000 policy-training pairs"
+"2,000 unseen test pairs"
+Green card title "2. THE BOOK CODE"
+Body "Dipesh Gautam · Reinforcement Learning"
+"Chapter 11: reward model + KL penalty + leave-one-out policy gradient"
+"Chapter 12.1: separate teacher-forcing demo"
+"Adapted code, not full chatbot training."
+
+Full-width flow panel title "3. HOW IT WORKS"
+Show four simple boxes with arrows left to right:
+"People rank replies" → "Learn a reward" → "Train a selector" → "Test on unseen pairs"
+
+Navy code panel title "THE POLICY UPDATE"
+Exactly three large monospace pseudocode lines:
+"score = reward - beta * log(policy / reference)"
+"baseline = mean(other sampled scores)"
+"update policy using score - baseline"
+Small label "Simplified from Chapter 11"
+
+Full-width results panel title "4. WHAT ACTUALLY HAPPENED"
+Subtitle "Chance of choosing the human-preferred reply"
+Five neatly aligned rows with short horizontal bars, numbers precise:
+"Random choice                         50.0%"
+"Direct reward ranker                  60.6%"
+"RLHF, no KL penalty                   59.1%"
+"RLHF, KL weight 0.2                   58.4%"
+"RLHF, KL weight 1.0                   55.4%"
+Highlight reward ranker as highest; highlight 58.4 row in teal. Do NOT say accuracy. Tiny clear note "RLHF results average 3 seeds. Same 2,000 test pairs."
+
+Yellow takeaway card heading "THE SIMPLE LESSON"
+Body "RLHF beat random choice. The simpler ranker still won."
+"More KL penalty reduced drift, but also reduced preference selection."
+
+Footer note in plain readable type:
+"Selects existing replies; does not generate answers."
+"Reproducibility: two runs produced identical metrics."
+"Sources: anthropics/hh-rlhf · Gautam, Ch. 11–12"
+Author signature "Lakshmi Sravani Putta"
+Keep every element within generous margins, all labels readable at phone size.
+
+User revision: add related colourful editorial illustrations of human reviewers, speech bubbles, a reward model, a robot selector with a KL anchor, and a Python laptop. Use a text-only results table with no bars. Preserve all verified values and scope limitations. Created with the built-in imagegen tool.

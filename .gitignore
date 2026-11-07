@@ -1,0 +1,12 @@
+__pycache__/
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+data/*.gz
+results/*.joblib
+results/*.npy
+results/*.npz

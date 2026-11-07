@@ -1,0 +1,72 @@
+PASS exact RLOO gradient: 0.190673071032; analytic: 0.190673071032
+PASS candidate swap symmetry
+{
+  "dataset": "two synthetic arithmetic demonstrations from the book setting",
+  "training_demo_mean_sequence_nll_before": 4.897660255432129,
+  "training_demo_mean_sequence_nll_after": 0.06150396168231964,
+  "scope": "teacher-forcing implementation check, not a held-out benchmark"
+}
+uniform_reference         preferred=0.500 KL=0.000
+reward_ranker             preferred=0.607 KL=0.692
+rloo_beta0.0_seed0        preferred=0.591 KL=0.291
+rloo_beta0.0_seed1        preferred=0.591 KL=0.291
+rloo_beta0.0_seed2        preferred=0.590 KL=0.288
+rloo_beta0.2_seed0        preferred=0.584 KL=0.241
+rloo_beta0.2_seed1        preferred=0.585 KL=0.241
+rloo_beta0.2_seed2        preferred=0.584 KL=0.239
+rloo_beta1.0_seed0        preferred=0.554 KL=0.088
+rloo_beta1.0_seed1        preferred=0.554 KL=0.088
+rloo_beta1.0_seed2        preferred=0.554 KL=0.089
+{
+  "train": {
+    "raw": 43835,
+    "invalid": 239,
+    "duplicate_pairs": 0,
+    "valid_unique": 43596,
+    "sha256": "518a5bf288456fc9f3b7c980c54116fba0c52f274d3f4d344675d83e4058f6f4"
+  },
+  "test": {
+    "raw": 2354,
+    "invalid": 15,
+    "duplicate_pairs": 0,
+    "valid_unique": 2339,
+    "sha256": "8be3fc1a13b27901631696f2be6f184c799f1baeaf145f53ac5db24960adc37b",
+    "removed_train_prompt_overlap_before_cap": 4
+  },
+  "reward_train_pairs": 8000,
+  "policy_train_pairs": 4000,
+  "test_pairs": 2000,
+  "test_prompt_groups": 2000,
+  "features": 2048,
+  "revision": "c72f5cee8eb7b4d2ea5617657f4430d5e333af07",
+  "versions": {
+    "python": "3.13.18",
+    "numpy": "2.2.6",
+    "sklearn": "1.8.0",
+    "torch": "2.9.1+cpu"
+  }
+}
+
+real	0m11.232s
+user	0m15.963s
+sys	0m0.385s
+# Measured results
+
+Human-preferred selection probability on 2,000 test pairs.
+RLOO values below average three training seeds. These are expected stochastic selection rates.
+
+| Selector | Preferred reply | KL from reference (nats) |
+|---|---:|---:|
+| Uniform reference | 50.00% | 0.000 |
+| Reward ranker | 60.70% | 0.692 |
+| RLOO, no KL | 59.06% | 0.290 |
+| RLOO, KL 0.2 | 58.43% | 0.240 |
+| RLOO, KL 1.0 | 55.42% | 0.089 |
+
+The reward ranker beats every learned stochastic policy in this experiment. More KL regularization reduces drift and also reduces preference selection performance. This result does not show that policy learning improves over direct ranking.
+
+Per-seed prompt-bootstrap 95% intervals and model reward values are in `results/metrics.json`. Intervals measure test-prompt sampling uncertainty, not all sources of model uncertainty.
+
+## Real execution
+
+Python 3.13.5; NumPy 2.2.6; scikit-learn 1.8.0; PyTorch 2.9.1 CPU.

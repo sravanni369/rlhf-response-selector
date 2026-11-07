@@ -1,0 +1,5 @@
+* text=auto
+*.png binary
+*.ps1 text eol=crlf
+results/*.json -text
+results/run_log.txt -text

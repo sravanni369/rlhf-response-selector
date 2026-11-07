@@ -1,0 +1,112 @@
+[
+  {
+    "policy": "uniform_reference",
+    "human_preferred_probability": 0.5,
+    "ci95": [
+      0.5,
+      0.5
+    ],
+    "kl_from_uniform_nats": 0.0,
+    "expected_reward_margin": 0.0
+  },
+  {
+    "policy": "reward_ranker",
+    "human_preferred_probability": 0.606,
+    "ci95": [
+      0.5845,
+      0.628
+    ],
+    "kl_from_uniform_nats": 0.6917608861988254,
+    "expected_reward_margin": 0.4278543644149006
+  },
+  {
+    "policy": "rloo_beta0.0_seed0",
+    "human_preferred_probability": 0.5906663766296351,
+    "ci95": [
+      0.5756873651502534,
+      0.6054553462427975
+    ],
+    "kl_from_uniform_nats": 0.2919342351802733,
+    "expected_reward_margin": 0.2978643348390251
+  },
+  {
+    "policy": "rloo_beta0.0_seed1",
+    "human_preferred_probability": 0.5910103395408148,
+    "ci95": [
+      0.5762950563274841,
+      0.6060201745884953
+    ],
+    "kl_from_uniform_nats": 0.2913329214032358,
+    "expected_reward_margin": 0.29694319135432523
+  },
+  {
+    "policy": "rloo_beta0.0_seed2",
+    "human_preferred_probability": 0.589881504751148,
+    "ci95": [
+      0.5754347772069767,
+      0.6047036992284073
+    ],
+    "kl_from_uniform_nats": 0.28931108743300643,
+    "expected_reward_margin": 0.2981184526437687
+  },
+  {
+    "policy": "rloo_beta0.2_seed0",
+    "human_preferred_probability": 0.5841921487208149,
+    "ci95": [
+      0.5706637434329782,
+      0.5976732364648625
+    ],
+    "kl_from_uniform_nats": 0.24083519474953097,
+    "expected_reward_margin": 0.2924280833262315
+  },
+  {
+    "policy": "rloo_beta0.2_seed1",
+    "human_preferred_probability": 0.5848475447382804,
+    "ci95": [
+      0.5711234449295528,
+      0.5983805571519765
+    ],
+    "kl_from_uniform_nats": 0.24174489595803086,
+    "expected_reward_margin": 0.29224141873211623
+  },
+  {
+    "policy": "rloo_beta0.2_seed2",
+    "human_preferred_probability": 0.5834588592137989,
+    "ci95": [
+      0.5699937852833312,
+      0.5967613148379156
+    ],
+    "kl_from_uniform_nats": 0.23963714365310632,
+    "expected_reward_margin": 0.2924523455824085
+  },
+  {
+    "policy": "rloo_beta1.0_seed0",
+    "human_preferred_probability": 0.5538054132961409,
+    "ci95": [
+      0.5454854927626411,
+      0.5622042184315531
+    ],
+    "kl_from_uniform_nats": 0.08840102964509272,
+    "expected_reward_margin": 0.21057408404899933
+  },
+  {
+    "policy": "rloo_beta1.0_seed1",
+    "human_preferred_probability": 0.5541668542417394,
+    "ci95": [
+      0.5458146382489476,
+      0.5624523400829124
+    ],
+    "kl_from_uniform_nats": 0.08836568557526536,
+    "expected_reward_margin": 0.21062841801761653
+  },
+  {
+    "policy": "rloo_beta1.0_seed2",
+    "human_preferred_probability": 0.554111622314579,
+    "ci95": [
+      0.5458398814624328,
+      0.5624423187053307
+    ],
+    "kl_from_uniform_nats": 0.08902294974595082,
+    "expected_reward_margin": 0.21130474252137962
+  }
+]

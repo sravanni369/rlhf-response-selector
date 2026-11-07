@@ -1,0 +1,6 @@
+{
+  "dataset": "two synthetic arithmetic demonstrations from the book setting",
+  "training_demo_mean_sequence_nll_before": 4.897660255432129,
+  "training_demo_mean_sequence_nll_after": 0.061504021286964417,
+  "scope": "teacher-forcing implementation check, not a held-out benchmark"
+}

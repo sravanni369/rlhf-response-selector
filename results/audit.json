@@ -1,0 +1,29 @@
+{
+  "train": {
+    "raw": 43835,
+    "invalid": 239,
+    "duplicate_pairs": 0,
+    "valid_unique": 43596,
+    "sha256": "518a5bf288456fc9f3b7c980c54116fba0c52f274d3f4d344675d83e4058f6f4"
+  },
+  "test": {
+    "raw": 2354,
+    "invalid": 15,
+    "duplicate_pairs": 0,
+    "valid_unique": 2339,
+    "sha256": "8be3fc1a13b27901631696f2be6f184c799f1baeaf145f53ac5db24960adc37b",
+    "removed_train_prompt_overlap_before_cap": 4
+  },
+  "reward_train_pairs": 8000,
+  "policy_train_pairs": 4000,
+  "test_pairs": 2000,
+  "test_prompt_groups": 2000,
+  "features": 2048,
+  "revision": "c72f5cee8eb7b4d2ea5617657f4430d5e333af07",
+  "versions": {
+    "python": "3.13.5",
+    "numpy": "2.2.6",
+    "sklearn": "1.8.0",
+    "torch": "2.9.1+cpu"
+  }
+}

@@ -1,0 +1,24 @@
+My small RLHF experiment beat random choice. A simpler ranker still won.
+
+I built a Python project that chooses between two existing assistant replies. The data comes from Anthropic HH-RLHF, helpful-base: real answer pairs ranked by people.
+
+I adapted Chapter 11 of Dipesh Gautam's Reinforcement Learning: learn a reward from human choices, then train a selector. A KL penalty keeps its choices closer to the starting policy. A separate Chapter 12.1 demo shows teacher forcing on two synthetic arithmetic examples.
+
+The split: 8,000 reward-training pairs, 4,000 policy-training pairs, and 2,000 unseen test pairs.
+
+Chance of selecting the human-preferred reply:
+• Random choice: 50.0%
+• Direct reward ranker: 60.6%
+• RLHF without a KL penalty: 59.1%
+• RLHF with KL weight 0.2: 58.4%
+• RLHF with KL weight 1.0: 55.4%
+
+The RLHF results average three training seeds. Two full runs produced identical metrics.
+
+More KL penalty reduced drift, but also reduced preference selection. Extra training stages did not beat direct ranking in this experiment.
+
+It selects existing replies; it does not generate answers. It scores replies without reading the prompt, so it may learn writing style rather than helpfulness in context.
+
+Dataset: https://github.com/anthropics/hh-rlhf
+
+#ReinforcementLearning #RLHF #MachineLearning #Python
