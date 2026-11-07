@@ -19,6 +19,7 @@ More KL penalty reduced drift, but also reduced preference selection. Extra trai
 
 It selects existing replies; it does not generate answers. It scores replies without reading the prompt, so it may learn writing style rather than helpfulness in context.
 
+Code: https://github.com/sravanni369/rlhf-response-selector
 Dataset: https://github.com/anthropics/hh-rlhf
 
 #ReinforcementLearning #RLHF #MachineLearning #Python

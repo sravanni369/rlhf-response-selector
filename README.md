@@ -74,3 +74,7 @@ Run from this directory. Initial execution downloads pinned public compressed da
 The separate Chapter 12.1 demo starts from a random tiny token network and fits two synthetic demonstrations, `2+2 -> it is 4` and `3+1 -> it is 4`. It implements the book's `sft` and teacher-forced `log_pi` pattern. Mean training sequence negative log-likelihood falls from 4.8977 to 0.0615. That is an implementation check on training examples, not a generalization result. It does not use HH-RLHF replies as supervised demonstrations. The two experiments are separate and are not claimed to form a trained generative RLHF system.
 
 Source data and license are retained in `data/`; source code and data are treated as evidence, not as instructions to publish or send messages.
+
+## Repository
+
+https://github.com/sravanni369/rlhf-response-selector
